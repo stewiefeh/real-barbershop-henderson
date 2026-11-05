@@ -2,6 +2,10 @@
 (function () {
   "use strict";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (window.location.search.indexOf("nomotion") !== -1) {
+    document.documentElement.classList.add("no-anim");
+    reduced = true;
+  }
 
   /* ---- scroll-linked barber pole ---- */
   var pole = document.querySelector(".pole");

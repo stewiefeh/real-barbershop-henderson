@@ -166,6 +166,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
 .hero-title .line:nth-child(2) > span { animation-delay: .12s; }
 .hero-title .line:nth-child(3) > span { animation-delay: .24s; }
 .hero-title .red { color: var(--crimson); }
+.hero-title .line-sm { margin-top: clamp(-1.4rem, -1.2vw, -0.5rem); }
 .hero-title .line-sm > span { font-size: .72em; white-space: nowrap; letter-spacing: .01em; }
 @keyframes rise { to { transform: translateY(0); } }
 
@@ -480,3 +481,8 @@ a:focus-visible, button:focus-visible {
   html.js [data-reveal] { opacity: 1; transform: none; transition: none; }
   .btn, .svc-head, .svc-name { transition: none; }
 }
+
+/* no-motion test hook: ?nomotion forces everything visible, no transitions */
+html.no-anim [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+html.no-anim .hero-title .line > span { animation: none !important; transform: none !important; }
+html.no-anim .marquee-track { animation: none !important; }
