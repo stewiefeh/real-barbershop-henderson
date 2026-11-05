@@ -49,7 +49,8 @@
     row.addEventListener(desktop.matches ? "mouseenter" : "click", function () { openRow(row); });
     row.querySelector(".svc-head").addEventListener("click", function () { openRow(row); });
   });
-  openRow(rows[0]);
+  /* default: first photo shows, no row pre-opened */
+  if (imgs[0]) imgs[0].classList.add("on");
 
   /* ---- today's hours ---- */
   var day = new Date().getDay();
