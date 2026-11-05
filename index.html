@@ -65,7 +65,7 @@
       </div>
     </div>
     <figure class="hero-photo" data-reveal>
-      <img src="assets/storefront.webp" data-parallax="0.12" alt="The storefront of The Real Barber Shop at 259 N Pecos Rd, with its striped barber pole out front" width="1365" height="1024" fetchpriority="high">
+      <img src="assets/storefront.webp" data-parallax style="--px:56px" alt="The storefront of The Real Barber Shop at 259 N Pecos Rd, with its striped barber pole out front" width="1365" height="1024" fetchpriority="high">
       <figcaption>The pole out front, still spinning. Suite 120.</figcaption>
     </figure>
   </div>
@@ -104,56 +104,45 @@
 
 <!-- ============ SERVICES ============ -->
 <!-- ============ SERVICES ============ -->
+<!-- ============ SERVICES ============ -->
 <section class="services" id="services">
   <div class="wrap">
     <h2 data-reveal>What they do here</h2>
     <div class="clipper" data-reveal>
       <span class="clipper-thumb" aria-hidden="true"></span>
-      <button class="clipper-btn is-on" data-cat="cuts">Haircuts</button>
-      <button class="clipper-btn" data-cat="beards">Beards &amp; shaves</button>
-      <button class="clipper-btn" data-cat="packages">Packages</button>
+      <button class="clipper-btn is-on" data-cat="cuts" aria-pressed="true">Haircuts</button>
+      <button class="clipper-btn" data-cat="beards" aria-pressed="false">Beards &amp; shaves</button>
+      <button class="clipper-btn" data-cat="packages" aria-pressed="false">Packages</button>
     </div>
     <div class="svc-cats">
       <div class="svc-cat is-on" data-cat="cuts">
         <article class="svc-card">
-          <figure><img src="assets/cut-fade.webp" alt="Skin fade with a textured top, seen from the side" width="768" height="1024" loading="lazy"></figure>
-          <h3>Fades</h3><p>Skin, taper, burst. Blended where it counts.</p><span class="price">$30</span>
+          <figure><img src="assets/cut-fade.webp" alt="Skin fade with a trimmed beard, client in the chair" width="768" height="1024" loading="lazy"></figure>
+          <h3>Fades</h3><p>Skin, taper, burst. Blended where it counts.</p>
         </article>
         <article class="svc-card">
-          <figure><img src="assets/cut-profile.webp" alt="Tapered cut with a swept textured top" width="1021" height="1024" loading="lazy"></figure>
-          <h3>Classic haircut</h3><p>Scissor work, clean lines, behaves till the next one.</p><span class="price">$25</span>
-        </article>
-        <article class="svc-card">
-          <figure><img class="alt-crop" src="assets/cut-fade.webp" alt="Fresh cut and neckline, straight razor lined" width="768" height="1024" loading="lazy"></figure>
-          <h3>Buzz &amp; line-up</h3><p>One guard, sharp edges, hot towel finish.</p><span class="price">$18</span>
+          <figure><img src="assets/cut-profile.webp" alt="Tapered cut with a swept textured top, seen in profile" width="768" height="1024" loading="lazy"></figure>
+          <h3>Classic haircut</h3><p>Scissor work, clean lines, behaves till the next one.</p>
         </article>
       </div>
-      <div class="svc-cat" data-cat="beards">
+      <div class="svc-cat" data-cat="beards" hidden>
         <article class="svc-card">
           <figure><img src="assets/cut-beard.webp" alt="Full beard shaped over a side-part cut" width="768" height="1024" loading="lazy"></figure>
-          <h3>Straight shave</h3><p>Hot towel, straight razor, steady hand.</p><span class="price">$35</span>
+          <h3>Beard trim</h3><p>Shaped, lined, even on both sides.</p>
         </article>
         <article class="svc-card">
-          <figure><img class="alt-crop" src="assets/cut-beard.webp" alt="Beard lined up clean at the cheek" width="768" height="1024" loading="lazy"></figure>
-          <h3>Beard trim</h3><p>Shaped, lined, even on both sides.</p><span class="price">$15</span>
-        </article>
-        <article class="svc-card">
-          <figure><img class="alt-crop" src="assets/cut-profile.webp" alt="Neckline cleaned up after a cut" width="1021" height="1024" loading="lazy"></figure>
-          <h3>Hot towel finish</h3><p>The ritual on its own. Sit back, let it happen.</p><span class="price">$10</span>
+          <figure><img src="assets/straight-shave.webp" alt="Client in the chair, neck strip set, cape on" width="768" height="1024" loading="lazy"></figure>
+          <h3>Straight shave</h3><p>Hot towel, straight razor, steady hand.</p>
         </article>
       </div>
-      <div class="svc-cat" data-cat="packages">
+      <div class="svc-cat" data-cat="packages" hidden>
         <article class="svc-card">
-          <figure><img src="assets/cut-fade.webp" alt="Faded cut paired with a straight-razor shave" width="768" height="1024" loading="lazy"></figure>
-          <h3>Cut + shave</h3><p>The full reset, top to bottom.</p><span class="price">$50</span>
+          <figure><img src="assets/chair-vibe.webp" alt="Client in the mirror after a cut, barber beside him" width="771" height="1024" loading="lazy"></figure>
+          <h3>Cut + beard</h3><p>One chair, one sitting, walk out finished.</p>
         </article>
         <article class="svc-card">
-          <figure><img src="assets/cut-profile.webp" alt="Cut and beard package, all one sitting" width="1021" height="1024" loading="lazy"></figure>
-          <h3>Cut + beard</h3><p>One chair, one appointment, done.</p><span class="price">$40</span>
-        </article>
-        <article class="svc-card">
-          <figure><img class="alt-crop" src="assets/cut-beard.webp" alt="Cut, shave and hot towel, the works" width="768" height="1024" loading="lazy"></figure>
-          <h3>The works</h3><p>Cut, shave, hot towel. Leave a new man.</p><span class="price">$65</span>
+          <figure><img src="assets/chair-work.webp" alt="Barber at work on a client's cut, striped cape on" width="768" height="1024" loading="lazy"></figure>
+          <h3>The works</h3><p>Cut, shave, hot towel. The full reset.</p>
         </article>
       </div>
     </div>
@@ -161,26 +150,23 @@
 </section>
 
 <!-- ============ GALLERY ============ -->
+<!-- ============ GALLERY ============ -->
 <section class="gallery" id="gallery">
   <div class="wrap">
     <h2 data-reveal>From the chair</h2>
-    <p class="gallery-sub" data-reveal>Real cuts, straight off the shop&rsquo;s Google page. Click one for the full frame.</p>
+    <p class="gallery-sub" data-reveal>Straight off the shop&rsquo;s own Google page. Click one for the full frame.</p>
     <div class="gal-grid" data-reveal>
-      <button class="gal-item" data-full="assets/storefront.webp" data-cap="The shop at 259 N. Pecos Rd, Suite 120 &mdash; pole out front, spinning since 2016.">
-        <img src="assets/storefront.webp" alt="The storefront with its striped barber pole" width="1365" height="1024" loading="lazy">
-        <span>The shop</span>
+      <button class="gal-item" data-full="assets/front-doors.webp" data-cap="The front door. Services and hours, posted right on the glass.">
+        <img src="assets/front-doors.webp" alt="Glass front doors with the services list and hours posted" width="1024" height="682" loading="lazy">
+        <span>The front door</span>
       </button>
-      <button class="gal-item" data-full="assets/cut-profile.webp" data-cap="Tapered sides, textured top swept back. A regular&rsquo;s regular.">
-        <img src="assets/cut-profile.webp" alt="Tapered cut with textured swept top" width="1021" height="1024" loading="lazy">
-        <span>The taper</span>
+      <button class="gal-item" data-full="assets/pole-front.webp" data-cap="The name on the wall at 259 N. Pecos Rd, Suite 120.">
+        <img src="assets/pole-front.webp" alt="The Real Barber Shop name lettered on the stucco facade" width="1024" height="576" loading="lazy">
+        <span>The name on the wall</span>
       </button>
-      <button class="gal-item" data-full="assets/cut-beard.webp" data-cap="Side part with a shaped full beard. Cut and beard in one chair.">
-        <img src="assets/cut-beard.webp" alt="Side-part cut with a shaped full beard" width="768" height="1024" loading="lazy">
-        <span>Part + beard</span>
-      </button>
-      <button class="gal-item" data-full="assets/cut-fade.webp" data-cap="Skin fade with a trimmed beard, cap still on the shoulders.">
-        <img src="assets/cut-fade.webp" alt="Skin fade with trimmed beard under a striped cape" width="768" height="1024" loading="lazy">
-        <span>The fade</span>
+      <button class="gal-item" data-full="assets/fresh-out.webp" data-cap="Fresh cut, straight out the door and into the Henderson sun.">
+        <img src="assets/fresh-out.webp" alt="Back of a fresh faded cut outdoors, blue car and palms behind" width="768" height="1024" loading="lazy">
+        <span>Straight out</span>
       </button>
     </div>
   </div>
@@ -190,7 +176,7 @@
 <section class="reviews" id="reviews">
   <div class="wrap">
     <div class="rev-top" data-reveal>
-      <span class="rev-score" data-parallax="0.06">4.6</span>
+      <span class="rev-score" data-parallax style="--px:26px">4.6</span>
       <p class="rev-credit">out of 251 Google reviews.<br>The barbers get named by name.</p>
     </div>
     <div class="rev-marquee" data-reveal>
