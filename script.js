@@ -88,7 +88,7 @@
     cats.forEach(function (catEl) {
       var on = catEl.getAttribute("data-cat") === btn.getAttribute("data-cat");
       catEl.classList.toggle("is-on", on);
-      if (on) catEl.removeAttribute("hidden"); else catEl.setAttribute("hidden", "");
+      catEl.setAttribute("aria-hidden", on ? "false" : "true");
     });
   };
   if (cBtns.length) {
