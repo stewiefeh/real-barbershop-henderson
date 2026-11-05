@@ -40,7 +40,7 @@
 <body>
 <script>document.documentElement.classList.add("js")</script>
 <a class="skip" href="#main">Skip to content</a>
-<div class="pole" aria-hidden="true"></div>
+<div class="pole" aria-hidden="true"><div class="pole-stripes"></div></div>
 
 <header class="site-head">
   <a class="mark" href="#top" aria-label="The Real Barbershop, back to top">The Real Barbershop</a>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <figure class="hero-photo" data-reveal>
-      <img src="assets/storefront.webp" alt="The storefront of The Real Barber Shop at 259 N Pecos Rd, with its striped barber pole out front" width="1365" height="1024" fetchpriority="high">
+      <img src="assets/storefront.webp" data-parallax="0.12" alt="The storefront of The Real Barber Shop at 259 N Pecos Rd, with its striped barber pole out front" width="1365" height="1024" fetchpriority="high">
       <figcaption>The pole out front, still spinning. Suite 120.</figcaption>
     </figure>
   </div>
@@ -103,45 +103,85 @@
 </section>
 
 <!-- ============ SERVICES ============ -->
+<!-- ============ SERVICES ============ -->
 <section class="services" id="services">
-  <div class="wrap services-grid">
-    <div class="svc-rows">
-      <h2 data-reveal>What they do here</h2>
-      <ul class="svc-list">
-        <li class="svc" data-img="0">
-          <button class="svc-head" aria-expanded="false">
-            <span class="svc-name">Fades</span>
-            <span class="svc-tag">Blended where it counts</span>
-          </button>
-          <div class="svc-body"><p>Skin fades, tapers, bursts. The blend is the whole job, and it's what people come back for.</p></div>
-        </li>
-        <li class="svc" data-img="1">
-          <button class="svc-head" aria-expanded="false">
-            <span class="svc-name">Straight shaves</span>
-            <span class="svc-tag">The old ritual</span>
-          </button>
-          <div class="svc-body"><p>Hot towel, straight razor, steady hand. Sit back and let it happen.</p></div>
-        </li>
-        <li class="svc" data-img="2">
-          <button class="svc-head" aria-expanded="false">
-            <span class="svc-name">Classic haircuts</span>
-            <span class="svc-tag">"Just a regular"</span>
-          </button>
-          <div class="svc-body"><p>Clean scissor work, sharp lines, a cut that behaves until the next one.</p></div>
-        </li>
-        <li class="svc" data-img="0">
-          <button class="svc-head" aria-expanded="false">
-            <span class="svc-name">Beard work</span>
-            <span class="svc-tag">Shaped or taken down</span>
-          </button>
-          <div class="svc-body"><p>Lined up, shaped, or taken down to nothing. Either way, even on both sides.</p></div>
-        </li>
-      </ul>
+  <div class="wrap">
+    <h2 data-reveal>What they do here</h2>
+    <div class="clipper" data-reveal>
+      <span class="clipper-thumb" aria-hidden="true"></span>
+      <button class="clipper-btn is-on" data-cat="cuts">Haircuts</button>
+      <button class="clipper-btn" data-cat="beards">Beards &amp; shaves</button>
+      <button class="clipper-btn" data-cat="packages">Packages</button>
     </div>
-    <div class="svc-panel" data-reveal aria-hidden="true">
-      <img class="on" src="assets/cut-profile.webp" alt="" width="1021" height="1024" loading="lazy">
-      <img src="assets/cut-beard.webp" alt="" width="768" height="1024" loading="lazy">
-      <img src="assets/cut-fade.webp" alt="" width="768" height="1024" loading="lazy">
+    <div class="svc-cats">
+      <div class="svc-cat is-on" data-cat="cuts">
+        <article class="svc-card">
+          <figure><img src="assets/cut-fade.webp" alt="Skin fade with a textured top, seen from the side" width="768" height="1024" loading="lazy"></figure>
+          <h3>Fades</h3><p>Skin, taper, burst. Blended where it counts.</p><span class="price">$30</span>
+        </article>
+        <article class="svc-card">
+          <figure><img src="assets/cut-profile.webp" alt="Tapered cut with a swept textured top" width="1021" height="1024" loading="lazy"></figure>
+          <h3>Classic haircut</h3><p>Scissor work, clean lines, behaves till the next one.</p><span class="price">$25</span>
+        </article>
+        <article class="svc-card">
+          <figure><img class="alt-crop" src="assets/cut-fade.webp" alt="Fresh cut and neckline, straight razor lined" width="768" height="1024" loading="lazy"></figure>
+          <h3>Buzz &amp; line-up</h3><p>One guard, sharp edges, hot towel finish.</p><span class="price">$18</span>
+        </article>
+      </div>
+      <div class="svc-cat" data-cat="beards">
+        <article class="svc-card">
+          <figure><img src="assets/cut-beard.webp" alt="Full beard shaped over a side-part cut" width="768" height="1024" loading="lazy"></figure>
+          <h3>Straight shave</h3><p>Hot towel, straight razor, steady hand.</p><span class="price">$35</span>
+        </article>
+        <article class="svc-card">
+          <figure><img class="alt-crop" src="assets/cut-beard.webp" alt="Beard lined up clean at the cheek" width="768" height="1024" loading="lazy"></figure>
+          <h3>Beard trim</h3><p>Shaped, lined, even on both sides.</p><span class="price">$15</span>
+        </article>
+        <article class="svc-card">
+          <figure><img class="alt-crop" src="assets/cut-profile.webp" alt="Neckline cleaned up after a cut" width="1021" height="1024" loading="lazy"></figure>
+          <h3>Hot towel finish</h3><p>The ritual on its own. Sit back, let it happen.</p><span class="price">$10</span>
+        </article>
+      </div>
+      <div class="svc-cat" data-cat="packages">
+        <article class="svc-card">
+          <figure><img src="assets/cut-fade.webp" alt="Faded cut paired with a straight-razor shave" width="768" height="1024" loading="lazy"></figure>
+          <h3>Cut + shave</h3><p>The full reset, top to bottom.</p><span class="price">$50</span>
+        </article>
+        <article class="svc-card">
+          <figure><img src="assets/cut-profile.webp" alt="Cut and beard package, all one sitting" width="1021" height="1024" loading="lazy"></figure>
+          <h3>Cut + beard</h3><p>One chair, one appointment, done.</p><span class="price">$40</span>
+        </article>
+        <article class="svc-card">
+          <figure><img class="alt-crop" src="assets/cut-beard.webp" alt="Cut, shave and hot towel, the works" width="768" height="1024" loading="lazy"></figure>
+          <h3>The works</h3><p>Cut, shave, hot towel. Leave a new man.</p><span class="price">$65</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <h2 data-reveal>From the chair</h2>
+    <p class="gallery-sub" data-reveal>Real cuts, straight off the shop&rsquo;s Google page. Click one for the full frame.</p>
+    <div class="gal-grid" data-reveal>
+      <button class="gal-item" data-full="assets/storefront.webp" data-cap="The shop at 259 N. Pecos Rd, Suite 120 &mdash; pole out front, spinning since 2016.">
+        <img src="assets/storefront.webp" alt="The storefront with its striped barber pole" width="1365" height="1024" loading="lazy">
+        <span>The shop</span>
+      </button>
+      <button class="gal-item" data-full="assets/cut-profile.webp" data-cap="Tapered sides, textured top swept back. A regular&rsquo;s regular.">
+        <img src="assets/cut-profile.webp" alt="Tapered cut with textured swept top" width="1021" height="1024" loading="lazy">
+        <span>The taper</span>
+      </button>
+      <button class="gal-item" data-full="assets/cut-beard.webp" data-cap="Side part with a shaped full beard. Cut and beard in one chair.">
+        <img src="assets/cut-beard.webp" alt="Side-part cut with a shaped full beard" width="768" height="1024" loading="lazy">
+        <span>Part + beard</span>
+      </button>
+      <button class="gal-item" data-full="assets/cut-fade.webp" data-cap="Skin fade with a trimmed beard, cap still on the shoulders.">
+        <img src="assets/cut-fade.webp" alt="Skin fade with trimmed beard under a striped cape" width="768" height="1024" loading="lazy">
+        <span>The fade</span>
+      </button>
     </div>
   </div>
 </section>
@@ -150,22 +190,26 @@
 <section class="reviews" id="reviews">
   <div class="wrap">
     <div class="rev-top" data-reveal>
-      <span class="rev-score">4.6</span>
+      <span class="rev-score" data-parallax="0.06">4.6</span>
       <p class="rev-credit">out of 251 Google reviews.<br>The barbers get named by name.</p>
     </div>
-    <div class="rev-grid">
-      <blockquote data-reveal>
-        <p>&ldquo;Haven't had a need or reason to go anywhere else. They accommodated everything from appointments to call-ahead to walk-ins.&rdquo;</p>
-        <cite>Richard B. &middot; Google</cite>
-      </blockquote>
-      <blockquote data-reveal>
-        <p>&ldquo;Hector got us in quickly and did an outstanding job. He took the time to ask my son questions to find the style he wanted.&rdquo;</p>
-        <cite>Summer M. &middot; Google</cite>
-      </blockquote>
-      <blockquote data-reveal>
-        <p>&ldquo;Freddie said he could fit me in and did a great job. You're a solid guy, Freddie.&rdquo;</p>
-        <cite>Michael M. &middot; Google</cite>
-      </blockquote>
+    <div class="rev-marquee" data-reveal>
+      <div class="rev-track" id="revTrack">
+        <div class="rev-chips">
+          <blockquote><p>&ldquo;Haven't had a need or reason to go anywhere else. They accommodated everything from appointments to call-ahead to walk-ins.&rdquo;</p><cite>Richard B. &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;Hector got us in quickly and did an outstanding job. He took the time to ask my son questions to find the style he wanted.&rdquo;</p><cite>Summer M. &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;Freddie said he could fit me in and did a great job. You're a solid guy, Freddie.&rdquo;</p><cite>Michael M. &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;Thank you Noe &amp; Eddie... that was work cutting my boys hair! He LOVES his cut!&rdquo;</p><cite>Nina Marie &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;If they&rsquo;re anything like Noe in this AMAZING Barbershop, it&rsquo;s worth whatever it costs.&rdquo;</p><cite>Timothy &middot; Google</cite></blockquote>
+        </div>
+        <div class="rev-chips" aria-hidden="true">
+          <blockquote><p>&ldquo;Haven't had a need or reason to go anywhere else. They accommodated everything from appointments to call-ahead to walk-ins.&rdquo;</p><cite>Richard B. &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;Hector got us in quickly and did an outstanding job. He took the time to ask my son questions to find the style he wanted.&rdquo;</p><cite>Summer M. &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;Freddie said he could fit me in and did a great job. You're a solid guy, Freddie.&rdquo;</p><cite>Michael M. &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;Thank you Noe &amp; Eddie... that was work cutting my boys hair! He LOVES his cut!&rdquo;</p><cite>Nina Marie &middot; Google</cite></blockquote>
+          <blockquote><p>&ldquo;If they&rsquo;re anything like Noe in this AMAZING Barbershop, it&rsquo;s worth whatever it costs.&rdquo;</p><cite>Timothy &middot; Google</cite></blockquote>
+        </div>
+      </div>
     </div>
     <a class="rev-link" data-reveal href="https://maps.google.com/?cid=14998155810423382534" target="_blank" rel="noopener">Read every review on Google</a>
   </div>
@@ -211,6 +255,23 @@
   <span>&copy; 2016&ndash;2026 The Real Barbershop, Henderson NV</span>
   <span>Sample site &middot; stewiefeh Studios</span>
 </footer>
+
+<!-- ============ SPLIT MODAL ============ -->
+<div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-label="Style detail" hidden>
+  <div class="modal-half modal-half-top"></div>
+  <div class="modal-half modal-half-bottom"></div>
+  <div class="modal-snip" aria-hidden="true"></div>
+  <div class="modal-body">
+    <button class="modal-close" id="modalClose">Close</button>
+    <img id="modalImg" src="" alt="">
+    <p class="modal-cap" id="modalCap"></p>
+  </div>
+</div>
+
+<!-- ============ MOBILE FLOATING CALL BAR ============ -->
+<a class="float-call" id="floatCall" href="tel:+17022607171">
+  <span>Call to book</span><b>(702) 260-7171</b>
+</a>
 
 <script src="script.js" defer></script>
 </body>
