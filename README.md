@@ -14,3 +14,14 @@ poster typography (Big Shoulders Display + Instrument Sans).
 - Page weight budget: fonts + 4 images + markup, no autoplay media
 
 Deployed on GitHub Pages.
+
+## Budgets (recorded 2026-11-05, first deploy)
+
+- Page weight, first view: about 485 KB total (HTML 10, CSS 12, JS 2, favicon 1,
+  hero image 185, web fonts ~276). Full scroll with all images: about 750 KB.
+  Below-fold images lazy-loaded. No autoplay media, no third-party tags.
+- Carbon baseline (Sustainable Web Design Model v4 estimate, from bytes transferred):
+  well under 0.1 g CO2e per first view. Estimate from bytes, not audit-grade.
+  Re-measure at next major deploy.
+- Host: GitHub Pages, served through Fastly; listed green in the Green Web
+  Foundation directory (greencheck 2026-11-05: green = true).
